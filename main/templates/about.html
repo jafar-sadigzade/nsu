@@ -1,0 +1,74 @@
+{% extends 'main_base.html' %}
+{% load static %}
+{% block title %} Əsas səhifə {% endblock %}
+
+{% block content %}
+
+
+    <main>
+        <!-- about area start -->
+        <section class="about-area pt-140 pb-90">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-12 col-lg-12 col-md-12">
+                        <div class="about-content mb-50">
+                            <div class="section-area mb-20">
+                                <span class="section-subtitle">Haqqımızda</span>
+                                <h2 class="section-title mb-15">Naxçıvan Dövlət Universitetinin Beynəlxalq məktəbi</h2>
+                                <p class="section-text">
+                                    {{ flatpage.content|safe }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about area end -->
+
+        <!-- blog area start -->
+        <section class="h2_blog-area pb-90">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-8 col-md-10">
+                        <div class="section-area-2 mb-50 text-center h2_blog-section-area">
+                            <h2 class="section-title mb-30">Son <span>Xəbərlər <img
+                                    src="{% static 'img/banner/2/line.png' %}" alt=""></span></h2>
+                            <p class="section-text">
+                                Beynəlxalq məktəbin fəaliyyəti ilə bağlı son xəbərlər, tədbirlərimiz, elanlarımız
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    {% for new in news %}
+                        <div class="col-xl-4 col-lg-6 col-md-6">
+                            <div class="h2_blog-item mb-30">
+                                <div class="h2_blog-img">
+                                    <a href="{% url 'news_detail' new.id %}">
+                                        <img src="{{ new.image.url }}"
+                                             style="width: 410px; height: 240px; object-fit: cover;"
+                                             alt="{{ new.title }}">
+                                    </a>
+                                </div>
+                                <div class="h2_blog-content">
+                                    <div class="h2_blog-content-meta">
+                                        <span><i class="fa-thin fa-clock"></i>{{ new.date }}</span>
+                                    </div>
+                                    <h5 class="h2_blog-content-title"><a
+                                            href="{% url 'news_detail' new.id %}">{{ new.title }}</a></h5>
+                                    <a href="{% url 'news_detail' new.id %}" class="theme-btn blog-btn t-theme-btn">Daha
+                                        çox
+                                        oxu</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!-- blog area end -->
+
+    </main>
+
+{% endblock %}

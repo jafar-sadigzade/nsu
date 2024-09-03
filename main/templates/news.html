@@ -1,0 +1,62 @@
+{% extends 'main_base.html' %}
+{% load static %}
+{% block title %} Xəbərlər {% endblock %}
+
+{% block content %}
+
+    <main>
+        <!-- blog area start -->
+        <section class="innerPage_blog-area pt-120 pb-90">
+            <div class="container">
+                <div class="row">
+                    {% for new in news %}
+                        <div class="col-xl-4 col-lg-6 col-md-6">
+                            <div class="h2_blog-item mb-30">
+                                <div class="h2_blog-img">
+                                    <a href="{% url 'news_detail' new.id %}">
+                                        <img src="{{ new.image.url }}" alt="{{ new.title }}" style="width: 410px; height: 240px; object-fit: cover;">
+                                    </a>
+                                </div>
+                                <div class="h2_blog-content">
+                                    <div class="h2_blog-content-meta">
+                                        <span><i class="fa-thin fa-clock"></i>{{ new.date }}</span>
+                                    </div>
+                                    <h5 class="h2_blog-content-title"><a
+                                            href="{% url 'news_detail' new.id %}">{{ new.title }}</a></h5>
+                                    <a href="{% url 'news_detail' new.id %}" class="theme-btn blog-btn t-theme-btn">Daha
+                                        çox oxu</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!-- blog area end -->
+
+        <!-- cta area start -->
+        <div class="cta-area">
+            <div class="container">
+                <div class="cta-wrapper">
+                    <div class="row align-items-center">
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="cta-content mb-30 mb-lg-0">
+                                <span class="cta-subtitle">Download App</span>
+                                <h2 class="cta-title">Are you Ready to Start your
+                                    Online Course?</h2>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="cta-button">
+                                <a href="#" class="cta-btn"><i class="fa-brands fa-apple"></i>Apple Store</a>
+                                <a href="#" class="cta-btn"><i class="fa-brands fa-google-play"></i>Play Store</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- cta area end -->
+    </main>
+
+{% endblock %}

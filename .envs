@@ -1,0 +1,9 @@
+DJANGO_SECRET_KEY=django-insecure-lkg@6n)9g9-%-*azg8cr%r3hozueiuv1l*bv0u84kh)q0%6hkq
+DJANGO_DEBUG=True
+DJANGO_ALLOWED_HOSTS=127.0.0.1,0.0.0.0
+DEVELOPMENT=True
+POSTGRES_DB=
+POSTGRES_USER=
+POSTGRES_PASSWORD=
+POSTGRES_HOST=
+DATABASE_URL=sqlite:////home/jafar/Desktop/some_stuff/nsu/db.sqlite3

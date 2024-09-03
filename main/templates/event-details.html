@@ -1,0 +1,31 @@
+{% extends 'main_base.html' %}
+{% load static %}
+{% block title %} Tədbirlər | {{ event.title }} {% endblock %}
+
+{% block content %}
+
+    <main>
+        <!-- event details area start -->
+        <section class="event_details-area pt-120 pb-60">
+            <div class="container">
+                <div class="event_details-img">
+                    <img src="{{ event.image.url }}" alt="{{ event.title }}"
+                                         style="width: 1290px; height: 570px; object-fit: contain;">
+                </div>
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="event_details-wrap mb-55">
+                            <div class="event_details-content">
+                                <h3 class="event_details-content-title">{{ event.title }}</h3>
+                                <p class="mb-25">{{ event.content|safe }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- event details area end -->
+    </main>
+
+
+{% endblock %}

@@ -1,0 +1,204 @@
+{% extends 'main_base.html' %}
+{% load static %}
+{% block title %} Xəbərlər {% endblock %}
+
+{% block content %}
+
+    <main>
+        <!-- blog details area start -->
+        <section class="blog_details-area pt-120 pb-80">
+            <div class="container">
+                <div class="blog_details-img">
+                    <img src="{{ news.image.url }}" alt="{{ news.title }}"
+                         style="width: 1290px; height: 570px; object-fit: contain;">
+                </div>
+                <div class="row">
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="blog_details-wrap mb-60">
+                            <div class="blog_details-top mb-50">
+                                <h3 class="blog_details-title">{{ news.title }}</h3>
+                                <div class="blog_details-meta">
+                                    <span><i class="fa-thin fa-clock"></i> {{ news.date }}</span>
+                                </div>
+                            </div>
+                            <div class="blog_details-content">
+                                <div class="blog_details-inner-text mr-80">
+                                    <p class="mb-25">{{ news.content|safe }}</p>
+                                </div>
+                                <div class="blog_details-content-meta">
+                                    <div class="blog_details-content-social">
+                                        <h6>Sosial şəbəkələrdə paylaş :</h6>
+                                        <ul>
+                                            <li>
+                                                <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}"
+                                                   target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                            <li>
+                                                <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}"
+                                                   target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                                            <li>
+                                                <a href="https://www.linkedin.com/shareArticle?url={{ request.build_absolute_uri }}"
+                                                   target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="blog_details-bottom mb-50">
+                                <div class="blog_details-bottom-item">
+                                    <span><i class="fa-thin fa-angle-left"></i></span>
+                                    {% if previous_news %}
+                                        <h5>
+                                            <a href="{% url 'news_detail' previous_news.id %}">{{ previous_news.title }}</a>
+                                        </h5>
+                                    {% endif %}
+                                </div>
+                                <div class="blog_details-bottom-item inner-item-2 text-end">
+                                    <span><i class="fa-light fa-angle-right"></i></span>
+                                    {% if next_news %}
+                                        <h5>
+                                            <a href="{% url 'news_detail' next_news.id %}">{{ next_news.title }}</a>
+                                        </h5>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="blog_details-comment pb-40">
+                                <h4 class="blog_details-comment-title">{% if total_comments == 0 %}{% else %} {{ total_comments }} rəy {% endif %}</h4>
+                                <div class="blog_details-comment-item">
+                                    <div class="blog_details-comment-content">
+                                        {% for comment in comments %}
+                                            <h6>{{ comment.user.first_name }}</h6>
+                                            <span>{{ comment.date_posted }}</span>
+                                            <p>{{ comment.content }}</p>
+                                        {% endfor %}
+                                        {% if messages %}
+                                            <div>
+                                                {% for message in messages %}
+                                                    <div class="alert alert-success">
+                                                        {{ message }}
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% if user.is_authenticated and news.is_comment %}
+                                <div class="blog_details-message">
+                                    <h3 class="blog_details-message-title">Rəyləriniz bizim üçün önəmlidir</h3>
+                                    <form method="post" class="blog_details-form">
+                                        {% csrf_token %}
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="blog_details-form-input mb-30">
+                                                    <label>
+                                                        <input type="text" value="{{ request.user }}" readonly>
+                                                    </label>
+                                                    <span class="inner-icon"><i class="fa-thin fa-user"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="blog_details-form-input mb-30">
+                                                    <label>
+                                                        <input type="email" value="{{ request.user.email }}" readonly>
+                                                    </label>
+                                                    <span class="inner-icon"><i class="fa-thin fa-envelope"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="blog_details-form-input mb-30">
+                                                    <label>
+                                                        <input type="text" value="{{ request.user.phone_number }}"
+                                                               readonly>
+                                                    </label>
+                                                    <span class="inner-icon"><i
+                                                            class="fa-thin fa-phone-volume"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="blog_details-form-input mb-50 blog_details-form-textarea">
+                                                    <label>
+                                                    <textarea name="content" cols="30" rows="10"
+                                                              placeholder="Rəy daxil et"></textarea>
+                                                    </label>
+                                                    <span class="inner-icon"><i class="fa-thin fa-pen"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="blog_details-form-submit">
+                                                    <div class="blog_details-form-btn">
+                                                        <button class="theme-btn blog_details-btn">Göndər</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4">
+                        <div class="blog_details-sidebar mb-60">
+                            <div class="blog_details-widget">
+                                <h4 class="blog_details-widget-title">Axtar</h4>
+                                <form method="GET" action="{% url 'news_detail' news.id %}">
+                                    <label>
+                                        <input type="text" name="query" maxlength="255">
+                                    </label>
+                                    <button type="submit"><i class="fa-thin fa-magnifying-glass"></i></button>
+                                </form>
+                            </div>
+                            {% if search_results%}
+                                {{ search_results }}
+                                <div class="blog_details-widget">
+                                    <h4 class="blog_details-widget-title">Axtarış nəticəsi</h4>
+                                    {% for result in search_results %}
+                                        <div class="blog_details-widget-post">
+                                            <div class="blog_details-post-img">
+                                                <a href="{% url 'news_detail' result.id %}">
+                                                    <img src="{{ result.image.url }}"
+                                                         style="width: 90px; height: 90px; object-fit: cover;"
+                                                         alt="{{ result.title }}">
+                                                </a>
+                                            </div>
+                                            <div class="blog_details-post-info">
+                                                <span><i class="fa-thin fa-clock"></i>{{ result.date }}</span>
+                                                <h6><a href="{% url 'news_detail' result.id %}">{{ result.title }}</a>
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                <div class="blog_details-widget">
+                                    <h4 class="blog_details-widget-title"
+                                        style="color: rgba(255,0,0, 0.6)">Axtarışa uyğun heçnə tapılmadı!</h4>
+
+                                </div>
+                            {% endif %}
+                            <div class="blog_details-widget">
+                                <h4 class="blog_details-widget-title">Sonuncu xəbərlər</h4>
+                                {% for new in latest_news %}
+                                    <div class="blog_details-widget-post">
+                                        <div class="blog_details-post-img">
+                                            <a href="{% url 'news_detail' new.id %}">
+                                                    <img src="{{ new.image.url }}"
+                                                         style="width: 90px; height: 90px; object-fit: cover;"
+                                                         alt="{{ new.title }}">
+                                                </a>
+                                        </div>
+                                        <div class="blog_details-post-info">
+                                            <span><i class="fa-thin fa-clock"></i>{{ new.date }}</span>
+                                            <h6><a href="{% url 'news_detail' new.id %}">{{ new.title }}</a></h6>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- course details area end -->
+    </main>
+
+{% endblock %}
