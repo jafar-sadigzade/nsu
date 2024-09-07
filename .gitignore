@@ -2,3 +2,4 @@ venv/
 */migrations/
 .idea/
 media/
+*/__pycache__/

@@ -61,14 +61,6 @@ class ContactAdmin(admin.ModelAdmin):
         return queryset
 
 
-admin.site.unregister(FlatPage)
-
-
-@admin.register(FlatPage)
-class FlatPageAdmin(DefaultFlatPageAdmin):
-    form = FlatPageForm
-
-
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
     list_display = ('title', 'date',)
@@ -84,3 +76,11 @@ class StaffAdmin(admin.ModelAdmin):
     search_fields = ('name', 'position')
     list_filter = ('position',)
     ordering = ('name',)
+
+
+admin.site.unregister(FlatPage)
+
+
+@admin.register(FlatPage)
+class FlatPageAdmin(DefaultFlatPageAdmin):
+    form = FlatPageForm

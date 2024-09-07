@@ -19,7 +19,9 @@ ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["my_domain.com"])
 # Application definition
 
 INSTALLED_APPS = [
+    'exam.apps.ExamConfig',
     'main.apps.MainConfig',
+    'student.apps.StudentConfig',
     'user.apps.UserConfig',
     'jazzmin.apps.JazzminConfig',
     'django.contrib.admin',

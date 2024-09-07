@@ -7,7 +7,7 @@ from main.models import HomePage, New, Comment, Event, Staff
 
 
 def index(request):
-    banners = HomePage.objects.all()
+    banners = HomePage.objects.filter(is_active=True)
     events = Event.objects.all()
     teachers = Staff.objects.filter(position='Müəllim')
     context = {

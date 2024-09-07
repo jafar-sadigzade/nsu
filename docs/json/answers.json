@@ -1,0 +1,116 @@
+[
+  {
+    "subject_name": "İngilis dili",
+    "question_type": [
+      {
+        "type_code": "qs",
+        "points_per_correct": 2.94,
+        "points_per_incorrect": 0,
+        "number_of_questions": 26
+      },
+      {
+        "type_code": "as",
+        "points_per_correct": 5.85,
+        "points_per_incorrect": 0,
+        "number_of_questions": 4
+      }
+    ],
+    "answers": "DADEACBDBBCBABBBADEBEEBDEA"
+  },
+  {
+    "subject_name": "Azərbaycan dili",
+    "question_type": [
+      {
+        "type_code": "qs",
+        "points_per_correct": 2.94,
+        "points_per_incorrect": 0,
+        "number_of_questions": 26
+      },
+      {
+        "type_code": "as",
+        "points_per_correct": 5.85,
+        "points_per_incorrect": 0,
+        "number_of_questions": 4
+      }
+    ],
+    "answers": "BBCCBBDDAAECAABDEBCACEBEDB"
+  },
+  {
+    "subject_name": "Riyaziyyat",
+    "question_type": [
+      {
+        "type_code": "qs",
+        "points_per_correct": 3.44,
+        "points_per_incorrect": 0,
+        "number_of_questions": 15
+      },
+      {
+        "type_code": "k",
+        "points_per_correct": 3.45,
+        "points_per_incorrect": 0,
+        "number_of_questions": 6
+      },
+      {
+        "type_code": "as",
+        "points_per_correct": 6.9,
+        "points_per_incorrect": 0,
+        "number_of_questions": 4
+      }
+    ],
+    "answers": "ADAB*BEADEEADAC;9     ;9     ;7     ;0.8   ;15    ;12    "
+  },
+  {
+    "subject_name": "Fransız dili",
+    "question_type": [
+      {
+        "type_code": "qs",
+        "points_per_correct": 2.94,
+        "points_per_incorrect": 0,
+        "number_of_questions": 26
+      },
+      {
+        "type_code": "as",
+        "points_per_correct": 5.85,
+        "points_per_incorrect": 0,
+        "number_of_questions": 4
+      }
+    ],
+    "answers": "AAAAAAAAAAAAAAAAAAAAAAAAAA"
+  },
+  {
+    "subject_name": "Alman dili",
+    "question_type": [
+      {
+        "type_code": "qs",
+        "points_per_correct": 2.94,
+        "points_per_incorrect": 0,
+        "number_of_questions": 26
+      },
+      {
+        "type_code": "as",
+        "points_per_correct": 5.85,
+        "points_per_incorrect": 0,
+        "number_of_questions": 4
+      }
+    ],
+    "answers": "BBBBBBBBBBBBBBBBBBBBBBBBBB"
+  },
+  {
+    "subject_name": "Rus dili",
+    "question_type": [
+      {
+        "type_code": "qs",
+        "points_per_correct": 2.94,
+        "points_per_incorrect": 0,
+        "number_of_questions": 26
+      },
+      {
+        "type_code": "as",
+        "points_per_correct": 5.85,
+        "points_per_incorrect": 0,
+        "number_of_questions": 4
+      }
+    ],
+    "answers": "CCCCCCCCCCCCCCCCCCCCCCCCCC"
+  }
+]

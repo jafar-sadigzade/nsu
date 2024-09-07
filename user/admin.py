@@ -13,7 +13,7 @@ class UserAdminConfig(BaseUserAdmin):
     list_filter = ['is_active', 'is_staff', 'is_superuser', 'date_joined']
 
     fieldsets = (
-        (None, {'fields': ('username', 'email', 'first_name', 'last_name', 'phone_number', 'password')}),
+        ("Personal Information", {'fields': ('username', 'email', 'first_name', 'last_name', 'phone_number', 'password')}),
         ('Permissions', {'fields': ('is_staff', 'is_superuser', 'is_active', 'groups', 'user_permissions')}),
         ('Important dates', {'fields': ('last_login', 'date_joined')}),
     )

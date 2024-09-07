@@ -1,0 +1,179 @@
+{
+  "Ad": "İSMAYIL",
+  "Soyad": "HƏSƏNLİ",
+  "İş nömrəsi": "2025100",
+  "Sinif": "9",
+  "Bölmə": "",
+  "Cins": "K",
+  "Kitabça variantı": "",
+  "Xarici dil": "I",
+  "Rayon": "",
+  "Məktəb": "",
+  "student_answers": "DADDACBDBBCBABBBAAEBEEBDEC,BBCCBBCDAEECAABDBBCACEEEDB,ADABBBEADEEADAC,9 ;9 ;7 ;0.8 ;15 ;12",
+  "subjects": {
+    "subjects1": {
+      "subject_name": "İngilis dili",
+      "question_type": [
+        {
+          "type_code": "qs",
+          "points_per_correct": 2.94,
+          "points_per_incorrect": 0,
+          "number_of_questions": 26,
+          "number_of_symbols": 0,
+          "correct_answers": "DADEACBDBBCBABBBADEBEEBDEA"
+        },
+        {
+          "type_code": "as",
+          "points_per_correct": 5.85,
+          "points_per_incorrect": 0,
+          "number_of_questions": 4,
+          "number_of_symbols": 0,
+          "answers": {
+            "answer1": 0,
+            "answer2": 0,
+            "answer3": 0,
+            "answer4": 0
+          }
+        }
+      ]
+    },
+    "subjects2": {
+      "subject_name": "Azərbaycan dili",
+      "question_type": [
+        {
+          "type_code": "qs",
+          "points_per_correct": 2.94,
+          "points_per_incorrect": 0,
+          "number_of_questions": 26,
+          "number_of_symbols": 0,
+          "correct_answers": "BBCCBBDDAAECAABDEBCACEBEDB"
+        },
+        {
+          "type_code": "as",
+          "points_per_correct": 5.85,
+          "points_per_incorrect": 0,
+          "number_of_questions": 4,
+          "number_of_symbols": 0,
+          "answers": {
+            "answer1": 0,
+            "answer2": 0,
+            "answer3": 0,
+            "answer4": 0
+          }
+        }
+      ]
+    },
+    "subjects3": {
+      "subject_name": "Riyaziyyat",
+      "question_type": [
+        {
+          "type_code": "qs",
+          "points_per_correct": 3.44,
+          "points_per_incorrect": 0,
+          "number_of_questions": 15,
+          "number_of_symbols": 0,
+          "correct_answers": "ADAB*BEADEEADAC"
+        },
+        {
+          "type_code": "k",
+          "points_per_correct": 3.45,
+          "points_per_incorrect": 0,
+          "number_of_questions": 6,
+          "number_of_symbols": 6,
+          "correct_answers": ";9 ;9 ;7 ;0.8 ;15 ;12 "
+        },
+        {
+          "type_code": "as",
+          "points_per_correct": 6.9,
+          "points_per_incorrect": 0,
+          "number_of_questions": 4,
+          "number_of_symbols": 0,
+          "answers": {
+            "answer1": 0,
+            "answer2": 0,
+            "answer3": 0,
+            "answer4": 0
+          }
+        }
+      ]
+    },
+    "subjects4": {
+      "subject_name": "Fransız dili",
+      "question_type": [
+        {
+          "type_code": "qs",
+          "points_per_correct": 2.94,
+          "points_per_incorrect": 0,
+          "number_of_questions": 26,
+          "number_of_symbols": 0,
+          "correct_answers": "AAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        {
+          "type_code": "as",
+          "points_per_correct": 5.85,
+          "points_per_incorrect": 0,
+          "number_of_questions": 4,
+          "number_of_symbols": 0,
+          "answers": {
+            "answer1": 0,
+            "answer2": 0,
+            "answer3": 0,
+            "answer4": 0
+          }
+        }
+      ]
+    },
+    "subjects5": {
+      "subject_name": "Alman dili",
+      "question_type": [
+        {
+          "type_code": "qs",
+          "points_per_correct": 2.94,
+          "points_per_incorrect": 0,
+          "number_of_questions": 26,
+          "number_of_symbols": 0,
+          "correct_answers": "BBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        {
+          "type_code": "as",
+          "points_per_correct": 5.85,
+          "points_per_incorrect": 0,
+          "number_of_questions": 4,
+          "number_of_symbols": 0,
+          "answers": {
+            "answer1": 0,
+            "answer2": 0,
+            "answer3": 0,
+            "answer4": 0
+          }
+        }
+      ]
+    },
+    "subjects6": {
+      "subject_name": "Rus dili",
+      "question_type": [
+        {
+          "type_code": "qs",
+          "points_per_correct": 2.94,
+          "points_per_incorrect": 0,
+          "number_of_questions": 26,
+          "number_of_symbols": 0,
+          "correct_answers": "CCCCCCCCCCCCCCCCCCCCCCCCCC"
+        },
+        {
+          "type_code": "as",
+          "points_per_correct": 5.85,
+          "points_per_incorrect": 0,
+          "number_of_questions": 4,
+          "number_of_symbols": 0,
+          "answers": {
+            "answer1": 0,
+            "answer2": 0,
+            "answer3": 0,
+            "answer4": 0
+          }
+        }
+      ]
+    }
+  }
+}

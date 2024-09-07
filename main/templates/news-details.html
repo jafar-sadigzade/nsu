@@ -62,7 +62,8 @@
                                 </div>
                             </div>
                             <div class="blog_details-comment pb-40">
-                                <h4 class="blog_details-comment-title">{% if total_comments == 0 %}{% else %} {{ total_comments }} rəy {% endif %}</h4>
+                                <h4 class="blog_details-comment-title">
+                                    {% if total_comments == 0 %}{% else %} {{ total_comments }} rəy {% endif %}</h4>
                                 <div class="blog_details-comment-item">
                                     <div class="blog_details-comment-content">
                                         {% for comment in comments %}
@@ -147,7 +148,7 @@
                                     <button type="submit"><i class="fa-thin fa-magnifying-glass"></i></button>
                                 </form>
                             </div>
-                            {% if search_results%}
+                            {% if search_results %}
                                 {{ search_results }}
                                 <div class="blog_details-widget">
                                     <h4 class="blog_details-widget-title">Axtarış nəticəsi</h4>
@@ -181,10 +182,10 @@
                                     <div class="blog_details-widget-post">
                                         <div class="blog_details-post-img">
                                             <a href="{% url 'news_detail' new.id %}">
-                                                    <img src="{{ new.image.url }}"
-                                                         style="width: 90px; height: 90px; object-fit: cover;"
-                                                         alt="{{ new.title }}">
-                                                </a>
+                                                <img src="{{ new.image.url }}"
+                                                     style="width: 90px; height: 90px; object-fit: cover;"
+                                                     alt="{{ new.title }}">
+                                            </a>
                                         </div>
                                         <div class="blog_details-post-info">
                                             <span><i class="fa-thin fa-clock"></i>{{ new.date }}</span>
