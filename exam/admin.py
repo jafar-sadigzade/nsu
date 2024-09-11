@@ -18,7 +18,7 @@ class ExamTypeAdmin(admin.ModelAdmin):
 
 @admin.register(QuestionType)
 class QuestionTypeAdmin(admin.ModelAdmin):
-    list_display = ('name', 'type_code', 'order', 'number_of_questions', 'points_per_correct', 'points_per_incorrect')
+    list_display = ('name', 'type_code', 'order', 'number_of_questions', 'points_per_correct', 'points_per_incorrect', 'number_of_symbols')
     search_fields = ('name', 'type_code')
 
 

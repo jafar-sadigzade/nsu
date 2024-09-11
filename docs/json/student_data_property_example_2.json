@@ -1,0 +1,110 @@
+{
+  "Ad": "İSMAYIL",
+  "Soyad": "HƏSƏNLİ",
+  "İş nömrəsi": "2025100",
+  "Sinif": "9",
+  "Bölmə": "",
+  "Cins": "K",
+  "Kitabça variantı": "",
+  "Xarici dil": "İngilis dili",
+  "Rayon": "",
+  "Məktəb": "",
+  "student_answers": "DADDACBDBBCBABBBAAEBEEBDEC,BBCCBBCDAEECAABDBBCACEEEDB,ADABBBEADEEADAC,9 ;9 ;7 ;0.8 ;15 ;12",
+  "subjects": {
+    "subject_1": {
+      "subject_name": "İngilis dili",
+      "subject_order": 1,
+      "question_type": [
+        {
+          "type_code": "qs",
+          "points_per_correct": 2.94,
+          "points_per_incorrect": 0,
+          "number_of_questions": 26,
+          "correct_answers": "DADEACBDBBCBABBBADEBEEBDEA",
+          "number_of_correct_answers": 0,
+          "number_of_wrong_answers": 0,
+          "subject_scores": 0
+        },
+        {
+          "type_code": "as",
+          "points_per_correct": 5.85,
+          "points_per_incorrect": 0,
+          "number_of_questions": 4,
+          "answers": {
+            "answer1": 0,
+            "answer2": 0,
+            "answer3": 0,
+            "answer4": 0
+          }
+        }
+      ]
+    },
+    "subject_5": {
+      "subject_name": "Azərbaycan dili",
+      "subject_order": 2,
+      "question_type": [
+        {
+          "type_code": "qs",
+          "points_per_correct": 2.94,
+          "points_per_incorrect": 0,
+          "number_of_questions": 26,
+          "correct_answers": "BBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "number_of_correct_answers": 0,
+          "number_of_wrong_answers": 0,
+          "subject_scores": 0
+        },
+        {
+          "type_code": "as",
+          "points_per_correct": 5.85,
+          "points_per_incorrect": 0,
+          "number_of_questions": 4,
+          "answers": {
+            "answer1": 0,
+            "answer2": 0,
+            "answer3": 0,
+            "answer4": 0
+          }
+        }
+      ]
+    },
+    "subject_6": {
+      "subject_name": "Riyaziyyat",
+      "subject_order": 3,
+      "question_type": [
+        {
+          "type_code": "qs",
+          "points_per_correct": 3.44,
+          "points_per_incorrect": 0,
+          "number_of_questions": 15,
+          "correct_answers": "CCCCCCCCCCCCCCC",
+          "number_of_correct_answers": 0,
+          "number_of_wrong_answers": 0,
+          "subject_scores": 0
+        },
+        {
+          "type_code": "k",
+          "points_per_correct": 3.45,
+          "points_per_incorrect": 0,
+          "number_of_questions": 6,
+          "number_of_symbols": 6,
+          "correct_answers": "CCCCCCCCCCCCCCCCCCCCCCCCCC",
+          "number_of_correct_answers": 0,
+          "number_of_wrong_answers": 0,
+          "subject_scores": 0
+        },
+        {
+          "type_code": "as",
+          "points_per_correct": 6.9,
+          "points_per_incorrect": 0,
+          "number_of_questions": 4,
+          "answers": {
+            "answer1": 0,
+            "answer2": 0,
+            "answer3": 0,
+            "answer4": 0
+          }
+        }
+      ]
+    }
+  }
+}

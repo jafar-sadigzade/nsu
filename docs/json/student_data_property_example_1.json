@@ -1,0 +1,114 @@
+{
+  "Ad": "AYSU",
+  "Soyad": "MƏMMƏDOVA",
+  "İş nömrəsi": "2025102",
+  "Sinif": "9",
+  "Bölmə": "",
+  "Cins": "Q",
+  "Kitabça variantı": "",
+  "Xarici dil": "Alman dili",
+  "Rayon": "",
+  "Məktəb": "",
+  "student_answers": "DADDACADBBCBABBBADEBEEBDEA,BBCEBCDDAAECAABDEBCBCEBEDB,ADABDBEADEEADAB,9 ;9 ;7 ;0.8 ;15 ;12",
+  "subjects": {
+    "subject_2": {
+      "subject_name": "Azərbaycan dili",
+      "subject_order": 2,
+      "subject_total_scores": 0,
+      "question_type": [
+        {
+          "type_code": "qs",
+          "points_per_correct": 2.94,
+          "points_per_incorrect": 0,
+          "number_of_questions": 26,
+          "correct_answers": "BBCCBBDDAAECAABDEBCACEBEDB",
+          "number_of_correct_answers": 5,
+          "number_of_wrong_answers": 21,
+          "question_type_total_scores": 14.7
+        },
+        {
+          "type_code": "as",
+          "points_per_correct": 5.85,
+          "points_per_incorrect": 0,
+          "number_of_questions": 4,
+          "answers": {
+            "answer1": 0,
+            "answer2": 0,
+            "answer3": 0,
+            "answer4": 0
+          }
+        }
+      ]
+    },
+    "subject_3": {
+      "subject_name": "Riyaziyyat",
+      "subject_order": 3,
+      "subject_total_scores": 0,
+      "question_type": [
+        {
+          "type_code": "qs",
+          "points_per_correct": 3.44,
+          "points_per_incorrect": 0,
+          "number_of_questions": 15,
+          "correct_answers": "ADAB*BEADEEADAC",
+          "number_of_correct_answers": 1,
+          "number_of_wrong_answers": 14,
+          "question_type_total_scores": 3.44
+        },
+        {
+          "type_code": "k",
+          "points_per_correct": 3.45,
+          "points_per_incorrect": 0,
+          "number_of_questions": 6,
+          "number_of_symbols": 6,
+          "correct_answers": ";9 ;9 ;7 ;0.8 ;15 ;12 ",
+          "number_of_correct_answers": 1,
+          "number_of_wrong_answers": 14,
+          "question_type_total_scores": 0
+        },
+        {
+          "type_code": "as",
+          "points_per_correct": 6.9,
+          "points_per_incorrect": 0,
+          "number_of_questions": 4,
+          "answers": {
+            "answer1": 0,
+            "answer2": 0,
+            "answer3": 0,
+            "answer4": 0
+          }
+        }
+      ]
+    },
+    "subject_5": {
+      "subject_name": "Alman dili",
+      "subject_order": 5,
+      "subject_total_scores": 0,
+      "question_type": [
+        {
+          "type_code": "qs",
+          "points_per_correct": 2.94,
+          "points_per_incorrect": 0,
+          "number_of_questions": 26,
+          "correct_answers": "BBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "number_of_correct_answers": 8,
+          "number_of_wrong_answers": 18,
+          "question_type_total_scores": 23.52
+        },
+        {
+          "type_code": "as",
+          "points_per_correct": 5.85,
+          "points_per_incorrect": 0,
+          "number_of_questions": 4,
+          "answers": {
+            "answer1": 0,
+            "answer2": 0,
+            "answer3": 0,
+            "answer4": 0
+          }
+        }
+      ]
+    }
+  },
+  "total_scores": 41.66
+}

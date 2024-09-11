@@ -222,9 +222,9 @@ class Exam(models.Model):
                     "number_of_questions": question_type.number_of_questions,
                     "number_of_symbols": question_type.number_of_symbols
                 })
-
             result.append({
                 "subject_name": subject.name,
+                "subject_order": subject.order,
                 "question_type": question_types_data,
                 "answers": subjects_answers[i]
             })
@@ -251,14 +251,12 @@ class Exam(models.Model):
     @property
     def student_answers_json(self):
         if not self.students_answers_txt:
-            print("No file provided.")
             return []
 
         try:
             # Read file content
             with self.students_answers_txt.open('r') as file:
                 file_content = file.readlines()
-            print(f"File Content: {file_content}")  # Debug print
         except Exception as e:
             print(f"Error reading file: {e}")
             return []
@@ -272,7 +270,6 @@ class Exam(models.Model):
             column.column_id: column
             for column in ColumnMapping.objects.filter(exam_type=self.exam_type)
         }
-        print(f"Column Mapping: {column_mapping}")  # Debug print
 
         results = []
 
@@ -283,7 +280,7 @@ class Exam(models.Model):
 
             for column_id, column in column_mapping.items():
                 if column_id < len(columns):
-                    value = columns[column_id].strip()  # Ensure there's no trailing whitespace
+                    value = columns[column_id].strip()
                     if column.is_answers:
                         answers[column.column_name] = value
                     else:
@@ -295,7 +292,6 @@ class Exam(models.Model):
 
             results.append(result)
 
-        print(f"Result JSON: {results}")  # Debug print
         return json.dumps(results, ensure_ascii=False, indent=4)
 
     class Meta:

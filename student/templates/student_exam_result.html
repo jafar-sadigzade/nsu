@@ -7,7 +7,13 @@
     <h1>Student Exam Result</h1>
 
     <h2>Student Information</h2>
-    <p>{{ student_data }}</p>
+    <p>{{ student.answers_json }}</p>
+    <hr>
+    <p>{{ student.student_answers_json }}</p>
+    <hr>
+    <p>{{ student.student_data }}</p>
+    <hr>
+{#    <p>{{ student.calculated_student_data.subjects }}</p>#}
 {#    <ul>#}
 {#        {% for key, value in student_data.items %}#}
 {#            <li><strong>{{ key }}:</strong> {{ value }}</li>#}

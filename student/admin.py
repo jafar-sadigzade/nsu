@@ -10,4 +10,6 @@ class StudentAdmin(admin.ModelAdmin):
 
 @admin.register(StudentExamResult)
 class StudentExamResultAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('id', 'student', 'exam', 'student_answers_json')
+    search_fields = ('student__user__first_name', 'student__user__last_name', 'exam__name')
+    list_filter = ('exam',)
